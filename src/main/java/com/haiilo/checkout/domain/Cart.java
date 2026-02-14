@@ -26,7 +26,7 @@ public class Cart {
     }
 
     // Get total price for this cart
-    public BigDecimal getSubtotal() {
+    public BigDecimal getTotalPrice() {
         return items.values().stream()
                 .map(CartItem::getTotalPrice)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
